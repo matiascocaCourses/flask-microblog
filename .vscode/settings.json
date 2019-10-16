@@ -1,0 +1,12 @@
+{
+    "python.pythonPath": "venv/bin/python3",
+    "sqltools.connections": [
+        {
+            "askForPassword": false,
+            "database": "./app.db",
+            "dialect": "SQLite",
+            "name": "app"
+        }
+    ],
+    "sqltools.useNodeRuntime": true
+}
