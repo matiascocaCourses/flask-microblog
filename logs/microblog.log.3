@@ -1,16 +1,34 @@
-2019-10-21 11:02:54,959 INFO: Microblog startup [in /Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/app/__init__.py:44]
-2019-10-21 11:03:29,211 INFO: Microblog startup [in /Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/app/__init__.py:44]
-2019-10-21 11:04:51,709 INFO: Microblog startup [in /Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/app/__init__.py:44]
-2019-10-21 11:06:51,899 INFO: Microblog startup [in /Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/app/__init__.py:44]
-2019-10-21 11:12:38,415 INFO: Microblog startup [in /Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/app/__init__.py:44]
-2019-10-21 11:15:50,661 INFO: Microblog startup [in /Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/app/__init__.py:44]
-2019-10-21 11:16:36,727 INFO: Microblog startup [in /Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/app/__init__.py:44]
-2019-10-21 11:17:15,670 INFO: Microblog startup [in /Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/app/__init__.py:44]
-2019-10-21 14:46:43,467 INFO: Microblog startup [in /Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/app/__init__.py:44]
-2019-10-21 14:47:25,373 INFO: Microblog startup [in /Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/app/__init__.py:44]
-2019-10-21 14:50:12,075 INFO: Microblog startup [in /Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/app/__init__.py:44]
-2019-10-21 14:50:57,479 INFO: Microblog startup [in /Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/app/__init__.py:44]
-2019-10-21 14:51:52,294 INFO: Microblog startup [in /Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/app/__init__.py:44]
-2019-10-21 14:53:26,868 INFO: Microblog startup [in /Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/app/__init__.py:44]
-2019-10-21 15:17:16,936 INFO: Microblog startup [in /Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/app/__init__.py:44]
-2019-10-21 15:17:29,949 INFO: Microblog startup [in /Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/app/__init__.py:44]
+2019-10-23 18:52:33,089 ERROR: Exception on /reset_password_request [POST] [in /Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/venv/lib/python3.7/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/venv/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/app/routes.py", line 168, in reset_password_request
+    send_password_reset_email(user)
+  File "/Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/app/email.py", line 20, in send_password_reset_email
+    user=user, token=token),
+  File "/Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/venv/lib/python3.7/site-packages/flask/templating.py", line 138, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/venv/lib/python3.7/site-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/venv/lib/python3.7/site-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/venv/lib/python3.7/site-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/venv/lib/python3.7/site-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/venv/lib/python3.7/site-packages/flask/templating.py", line 60, in get_source
+    return self._get_source_fast(environment, template)
+  File "/Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/venv/lib/python3.7/site-packages/flask/templating.py", line 89, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: email/reset_password/txt
+2019-10-23 19:06:59,165 INFO: Microblog startup [in /Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/app/__init__.py:47]

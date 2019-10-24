@@ -1,0 +1,103 @@
+2019-10-19 10:14:21,963 INFO: Microblog startup [in /Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/app/__init__.py:43]
+2019-10-19 10:15:56,561 ERROR: Exception on /edit_profile [POST] [in /Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/venv/lib/python3.7/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/venv/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1249, in _execute_context
+    cursor, statement, parameters, context
+  File "/Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/venv/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.IntegrityError: UNIQUE constraint failed: user.username
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/venv/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/venv/lib/python3.7/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/app/routes.py", line 91, in edit_profile
+    db.session.commit()
+  File "/Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/venv/lib/python3.7/site-packages/sqlalchemy/orm/scoping.py", line 162, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "/Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/venv/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 1027, in commit
+    self.transaction.commit()
+  File "/Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/venv/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 494, in commit
+    self._prepare_impl()
+  File "/Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/venv/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 473, in _prepare_impl
+    self.session.flush()
+  File "/Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/venv/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 2459, in flush
+    self._flush(objects)
+  File "/Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/venv/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 2597, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "/Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/venv/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 68, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "/Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/venv/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 153, in reraise
+    raise value
+  File "/Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/venv/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 2557, in _flush
+    flush_context.execute()
+  File "/Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/venv/lib/python3.7/site-packages/sqlalchemy/orm/unitofwork.py", line 422, in execute
+    rec.execute(self)
+  File "/Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/venv/lib/python3.7/site-packages/sqlalchemy/orm/unitofwork.py", line 589, in execute
+    uow,
+  File "/Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/venv/lib/python3.7/site-packages/sqlalchemy/orm/persistence.py", line 236, in save_obj
+    update,
+  File "/Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/venv/lib/python3.7/site-packages/sqlalchemy/orm/persistence.py", line 996, in _emit_update_statements
+    statement, multiparams
+  File "/Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/venv/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 988, in execute
+    return meth(self, multiparams, params)
+  File "/Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/venv/lib/python3.7/site-packages/sqlalchemy/sql/elements.py", line 287, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/venv/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1107, in _execute_clauseelement
+    distilled_params,
+  File "/Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/venv/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1253, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/venv/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1473, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "/Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/venv/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 398, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/venv/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 152, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/venv/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1249, in _execute_context
+    cursor, statement, parameters, context
+  File "/Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/venv/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.IntegrityError: (sqlite3.IntegrityError) UNIQUE constraint failed: user.username
+[SQL: UPDATE user SET username=?, about_me=? WHERE user.id = ?]
+[parameters: ('susan', 'Hola, esta es una prueba de edicion del perfil. No se como darme cuenta si hay mas o no hay mas de 140 caracteres. Texto agregado.', 2)]
+(Background on this error at: http://sqlalche.me/e/gkpj)
+2019-10-19 10:24:58,727 INFO: Microblog startup [in /Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/app/__init__.py:44]
+2019-10-19 10:25:07,530 ERROR: Exception on /edit_profile [GET] [in /Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/venv/lib/python3.7/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/venv/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/venv/lib/python3.7/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/app/routes.py", line 87, in edit_profile
+    form = EditProfileForm()
+  File "/Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/venv/lib/python3.7/site-packages/wtforms/form.py", line 212, in __call__
+    return type.__call__(cls, *args, **kwargs)
+TypeError: __init__() missing 1 required positional argument: 'original_username'
+2019-10-21 10:10:01,192 INFO: Microblog startup [in /Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/app/__init__.py:44]
+2019-10-21 11:01:08,417 INFO: Microblog startup [in /Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/app/__init__.py:44]
+2019-10-21 11:01:26,335 INFO: Microblog startup [in /Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/app/__init__.py:44]
+2019-10-21 11:01:41,576 INFO: Microblog startup [in /Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/app/__init__.py:44]
+2019-10-21 11:02:12,692 INFO: Microblog startup [in /Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/app/__init__.py:44]
