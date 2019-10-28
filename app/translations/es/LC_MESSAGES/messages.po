@@ -1,0 +1,243 @@
+# Spanish translations for PROJECT.
+# Copyright (C) 2019 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2019-10-28 18:03-0300\n"
+"PO-Revision-Date: 2019-10-28 18:06-0300\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: es\n"
+"Language-Team: es <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+
+#: app/__init__.py:21
+msgid "Please log in to access this page."
+msgstr "Por favor loguearse para acceder a esta pagina."
+
+#: app/email.py:22
+msgid "[Microblog] Reset Your Password"
+msgstr "[Microblog] Resetee su contraseña"
+
+#: app/forms.py:11 app/forms.py:18 app/forms.py:37
+msgid "Username"
+msgstr "Nombre de usuario"
+
+#: app/forms.py:12 app/forms.py:20 app/forms.py:64
+msgid "Password"
+msgstr "Contraseña"
+
+#: app/forms.py:13
+msgid "Remember Me"
+msgstr "Recuerdame"
+
+#: app/forms.py:14 app/routes.py:60 app/templates/login.html:5
+msgid "Sign In"
+msgstr "Ingresar"
+
+#: app/forms.py:19 app/forms.py:59
+msgid "Email"
+msgstr "Correo electronico"
+
+#: app/forms.py:22 app/forms.py:65
+msgid "Repeat Password"
+msgstr "Repetir contraseña"
+
+#: app/forms.py:23 app/routes.py:81 app/templates/register.html:5
+msgid "Register"
+msgstr "Registrarse"
+
+#: app/forms.py:28 app/forms.py:49
+msgid "Please use a different username."
+msgstr "Por favor utilizar un nombre de usuario diferente."
+
+#: app/forms.py:33
+msgid "Please use a different email address."
+msgstr "Por favor utilizar una direccion de correo diferente."
+
+#: app/forms.py:38
+msgid "About me"
+msgstr "Sobre mi"
+
+#: app/forms.py:39 app/forms.py:55
+msgid "Submit"
+msgstr "Enviar"
+
+#: app/forms.py:53
+msgid "Say something"
+msgstr "Escribir algo"
+
+#: app/forms.py:60 app/forms.py:67
+msgid "Request Password Reset"
+msgstr "Requerir reseteo de contraseña"
+
+#: app/routes.py:31
+msgid "Your post is now live!"
+msgstr "Su posteo se ha realizado"
+
+#: app/routes.py:40 app/templates/base.html:21
+msgid "Home"
+msgstr "Pagina principal"
+
+#: app/routes.py:53
+msgid "Invalid username or password"
+msgstr "Usuario o contraseña invalidos"
+
+#: app/routes.py:79
+msgid "Congratulations, you are now a registered user!"
+msgstr "Felicitaciones, usted es un usuario registrado!"
+
+#: app/routes.py:107
+msgid "Your changes have been saved."
+msgstr "Sus cambios fueron grabados."
+
+#: app/routes.py:112 app/templates/edit_profile.html:5
+msgid "Edit Profile"
+msgstr "Editar su perfil"
+
+#: app/routes.py:121 app/routes.py:137
+#, python-format
+msgid "User %(username)s not found."
+msgstr "Usuario %(username)s no encontrado."
+
+#: app/routes.py:124
+msgid "You cannot follow yourself!"
+msgstr "No se puede seguir a uster mismo!"
+
+#: app/routes.py:128
+#, python-format
+msgid "You are following %(username)s!"
+msgstr "Usted esta siguiendo a %(username)s!"
+
+#: app/routes.py:140
+msgid "You cannot unfollow yourself!"
+msgstr "No puede eliminar seguimiento de usted mismo!"
+
+#: app/routes.py:144
+#, python-format
+msgid "You are not following %(username)s!"
+msgstr "Usted no esta siguiendo a %(username)s!"
+
+#: app/routes.py:158 app/templates/base.html:22
+msgid "Explore"
+msgstr "Explorar"
+
+#: app/routes.py:172
+msgid "Check your email for the instructions to reset your password"
+msgstr "Verificar su correo para instrucciones de reseteo de contraseña"
+
+#: app/routes.py:175 app/templates/reset_password_request.html:5
+msgid "Reset Password"
+msgstr "Reseteo de contraseña"
+
+#: app/routes.py:189
+msgid "Your password has been reset."
+msgstr "Su contraseña ha sido reseteada"
+
+#: app/templates/404.html:4
+msgid "Not found"
+msgstr "No encontrado"
+
+#: app/templates/404.html:5 app/templates/500.html:6
+msgid "Back"
+msgstr "Volver"
+
+#: app/templates/500.html:4
+msgid "An unexpected error has occurred"
+msgstr "Un error inesperado ha ocurrido"
+
+#: app/templates/500.html:5
+msgid "The administrator has been notified. Sorry for the inconvenience!"
+msgstr "El administrador ha sido notificado. Disculpas por el inconveniente!"
+
+#: app/templates/_post.html:14
+#, python-format
+msgid "%(username)s said %(when)s"
+msgstr "%(username)s dijo %(when)s"
+
+#: app/templates/base.html:4
+msgid "Welcome to Microblog"
+msgstr "Bienvenido a Microblog"
+
+#: app/templates/base.html:26
+msgid "Login"
+msgstr "Ingresar"
+
+#: app/templates/base.html:28
+msgid "Profile"
+msgstr "Perfil"
+
+#: app/templates/base.html:29
+msgid "Logout"
+msgstr "Salir"
+
+#: app/templates/index.html:5
+#, python-format
+msgid "Hi, %(username)s!"
+msgstr "Hola, %(username)s!"
+
+#: app/templates/index.html:17 app/templates/user.html:31
+msgid "Newer posts"
+msgstr "Nuevos posteos"
+
+#: app/templates/index.html:22 app/templates/user.html:36
+msgid "Older posts"
+msgstr "Viejos posteos"
+
+#: app/templates/login.html:12
+msgid "New User?"
+msgstr "Nuevo usuario?"
+
+#: app/templates/login.html:12
+msgid "Click to Register!"
+msgstr "Hacer un click para registrarse!"
+
+#: app/templates/login.html:14
+msgid "Forgot Your Password?"
+msgstr "Olvido su contraseña?"
+
+#: app/templates/login.html:15
+msgid "Click to Reset It"
+msgstr "Realizar click para resetear"
+
+#: app/templates/reset_password.html:5
+msgid "Reset Your Password"
+msgstr "Resetear su contraseña"
+
+#: app/templates/user.html:8
+msgid "User"
+msgstr "Usuario"
+
+#: app/templates/user.html:11
+msgid "Last seen on"
+msgstr "Ultima vez visto"
+
+#: app/templates/user.html:13
+#, python-format
+msgid "%(count)d followers"
+msgstr "%(count)d seguidores"
+
+#: app/templates/user.html:13
+#, python-format
+msgid "%(count)d following"
+msgstr "%(count)d siguiendo"
+
+#: app/templates/user.html:15
+msgid "Edit your profile"
+msgstr "Editar su perfil"
+
+#: app/templates/user.html:17
+msgid "Follow"
+msgstr "Seguir"
+
+#: app/templates/user.html:19
+msgid "Unfollow"
+msgstr "Dejar de seguir"
+
