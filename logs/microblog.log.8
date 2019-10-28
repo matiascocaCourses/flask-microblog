@@ -1,16 +1,103 @@
-2019-10-21 11:02:54,959 INFO: Microblog startup [in /Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/app/__init__.py:44]
-2019-10-21 11:03:29,211 INFO: Microblog startup [in /Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/app/__init__.py:44]
-2019-10-21 11:04:51,709 INFO: Microblog startup [in /Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/app/__init__.py:44]
-2019-10-21 11:06:51,899 INFO: Microblog startup [in /Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/app/__init__.py:44]
-2019-10-21 11:12:38,415 INFO: Microblog startup [in /Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/app/__init__.py:44]
-2019-10-21 11:15:50,661 INFO: Microblog startup [in /Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/app/__init__.py:44]
-2019-10-21 11:16:36,727 INFO: Microblog startup [in /Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/app/__init__.py:44]
-2019-10-21 11:17:15,670 INFO: Microblog startup [in /Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/app/__init__.py:44]
-2019-10-21 14:46:43,467 INFO: Microblog startup [in /Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/app/__init__.py:44]
-2019-10-21 14:47:25,373 INFO: Microblog startup [in /Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/app/__init__.py:44]
-2019-10-21 14:50:12,075 INFO: Microblog startup [in /Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/app/__init__.py:44]
-2019-10-21 14:50:57,479 INFO: Microblog startup [in /Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/app/__init__.py:44]
-2019-10-21 14:51:52,294 INFO: Microblog startup [in /Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/app/__init__.py:44]
-2019-10-21 14:53:26,868 INFO: Microblog startup [in /Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/app/__init__.py:44]
-2019-10-21 15:17:16,936 INFO: Microblog startup [in /Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/app/__init__.py:44]
-2019-10-21 15:17:29,949 INFO: Microblog startup [in /Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/app/__init__.py:44]
+2019-10-21 17:46:47,913 ERROR: Exception on /index [GET] [in /Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/venv/lib/python3.7/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/venv/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/venv/lib/python3.7/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/app/routes.py", line 24, in index
+    return render_template('index.html', title='Home Page', posts=posts)
+  File "/Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/venv/lib/python3.7/site-packages/flask/templating.py", line 140, in render_template
+    ctx.app,
+  File "/Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/venv/lib/python3.7/site-packages/flask/templating.py", line 120, in _render
+    rv = template.render(context)
+  File "/Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/venv/lib/python3.7/site-packages/jinja2/asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "/Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/venv/lib/python3.7/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/venv/lib/python3.7/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/venv/lib/python3.7/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/app/templates/index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/app/templates/base.html", line 30, in top-level template code
+    {% block content %}{% endblock %}
+  File "/Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/app/templates/index.html", line 6, in block "content"
+    {{ form.hidden_tag() }}
+  File "/Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/venv/lib/python3.7/site-packages/jinja2/environment.py", line 430, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'form' is undefined
+2019-10-21 17:55:05,534 INFO: Microblog startup [in /Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/app/__init__.py:44]
+2019-10-21 18:24:23,960 INFO: Microblog startup [in /Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/app/__init__.py:44]
+2019-10-21 18:55:33,640 INFO: Microblog startup [in /Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/app/__init__.py:44]
+2019-10-22 11:15:16,436 INFO: Microblog startup [in /Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/app/__init__.py:44]
+2019-10-22 19:00:08,644 INFO: Microblog startup [in /Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/app/__init__.py:44]
+2019-10-22 20:00:53,502 INFO: Microblog startup [in /Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/app/__init__.py:44]
+2019-10-22 20:23:02,295 INFO: Microblog startup [in /Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/app/__init__.py:44]
+2019-10-22 20:23:13,677 ERROR: Exception on /user/Matias [GET] [in /Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/venv/lib/python3.7/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/venv/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/venv/lib/python3.7/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/app/routes.py", line 77, in user
+    posts = user.posts.order_by(Post.timestamp.desc()).paginate(
+AttributeError: 'User' object has no attribute 'posts'
+2019-10-23 10:09:26,603 INFO: Microblog startup [in /Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/app/__init__.py:44]
+2019-10-23 10:10:07,678 ERROR: Exception on /user/Matias [GET] [in /Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/venv/lib/python3.7/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/venv/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/venv/lib/python3.7/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/app/routes.py", line 84, in user
+    next_url=next_url, prev_url=prev_url)
+  File "/Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/venv/lib/python3.7/site-packages/flask/templating.py", line 140, in render_template
+    ctx.app,
+  File "/Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/venv/lib/python3.7/site-packages/flask/templating.py", line 120, in _render
+    rv = template.render(context)
+  File "/Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/venv/lib/python3.7/site-packages/jinja2/asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "/Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/venv/lib/python3.7/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/venv/lib/python3.7/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/venv/lib/python3.7/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/app/templates/user.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/app/templates/base.html", line 31, in top-level template code
+    {% block content %}{% endblock %}
+  File "/Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/app/templates/user.html", line 27, in block "content"
+    {% for post in posts %}
+TypeError: 'Pagination' object is not iterable
