@@ -1,11 +1,12 @@
-from codecs import decode
 from datetime import datetime
-from time import time
-from app import db, login, app
-from werkzeug.security import generate_password_hash, check_password_hash
-from flask_login import UserMixin
 from hashlib import md5
+from time import time
+from flask import current_app
+from flask_login import UserMixin
+from werkzeug.security import generate_password_hash, check_password_hash
 import jwt
+from app import db, login
+
 
 followers = db.Table(
     'followers',
@@ -56,7 +57,7 @@ class User(UserMixin, db.Model):
 
     def followed_posts(self):
         followed = Post.query.join(
-            followers, (followers.c.followed_id == Post.user_id)). filter(
+            followers, (followers.c.followed_id == Post.user_id)).filter(
                 followers.c.follower_id == self.id)
         own = Post.query.filter_by(user_id=self.id)
         return followed.union(own).order_by(Post.timestamp.desc())
@@ -64,26 +65,22 @@ class User(UserMixin, db.Model):
     def get_reset_password_token(self, expires_in=600):
         return jwt.encode(
             {'reset_password': self.id, 'exp': time() + expires_in},
-            app.config['SECRET_KEY'], algorithm='HS256').decode('utf-8')
+            current_app.config['SECRET_KEY'],
+            algorithm='HS256').decode('utf-8')
 
     @staticmethod
-    def verity_reset_password_token(token):
+    def verify_reset_password_token(token):
         try:
-            id = jwt.decode(token, app.config['SECRET_KEY'],
+            id = jwt.decode(token, current_app.config['SECRET_KEY'],
                             algorithms=['HS256'])['reset_password']
         except:
             return
         return User.query.get(id)
 
 
-'''
-This was the original function but without the user own posts
-    def followed_posts(self):
-        return Post.query.join(
-            followers, (followers.c.followed_id == Post.user_id)).filter(
-                followers.c.follower_id == self.id).order_by(
-                    Post.timestamp.desc())
-'''
+@login.user_loader
+def load_user(id):
+    return User.query.get(int(id))
 
 
 class Post(db.Model):
@@ -95,8 +92,3 @@ class Post(db.Model):
 
     def __repr__(self):
         return '<Post {}>'.format(self.body)
-
-
-@login.user_loader
-def load_user(id):
-    return User.query.get(int(id))

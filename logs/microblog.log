@@ -59,3 +59,4 @@ jinja2.exceptions.UndefinedError: 'moments' is undefined
 2019-10-30 18:56:51,811 INFO: Microblog startup [in /Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/app/__init__.py:54]
 2019-10-31 11:44:19,165 INFO: Microblog startup [in /Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/app/__init__.py:54]
 2019-10-31 11:44:31,214 INFO: Microblog startup [in /Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/app/__init__.py:54]
+2019-10-31 11:46:17,157 INFO: Microblog startup [in /Users/usr_python/GDcocamatias/Desarrollo de SW/Cursos/Flask/microblog/app/__init__.py:54]
